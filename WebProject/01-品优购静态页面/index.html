@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO优化 由专业人员写  只写标签-->
+    <title>品优购商城-综合网购首选-正品低价、品质保障、配送及时、轻松购物！</title>
+    <meta name="description"
+        content="品优购商城-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东" />
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 这个animate.js 必须写到 index.js的上面引入 -->
+    <script src="js/animate.js"></script>
+    <!-- 引入我们首页的js文件 -->
+    <script src="js/index.js"></script>
+    <!-- 网站上传：cutftp github-->
+</head>
+
+<body>
+
+    <!-- 先完成公共部分制作 -->
+    <!-- 快捷导航模块 shortcut start  -->
+    <section class="shortcut">
+        <!-- 大盒子通栏 在版心里分左右两个盒子 -->
+        <div class="w">
+            <div class="fleft">
+                <ul>
+                    <li>品优购欢迎您！&nbsp;</li>
+                    <li>
+                        <a href="">请登录&nbsp;</a>
+                        <a href="register.html" class="style_red">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fright">
+                <ul>
+                    <!-- 字数不一样 不给li宽度 给margin 竖线也用盒子  -->
+                    <li>我的订单</li>
+                    <li></li>
+                    <li class="arrow-icon">我的品优购</li>
+                    <li></li>
+                    <li>品优购会员</li>
+                    <li></li>
+                    <li>企业采购</li>
+                    <li></li>
+                    <li class="arrow-icon">关注品优购</li>
+                    <li></li>
+                    <li class="arrow-icon">我的订单</li>
+                    <li></li>
+                    <li class="arrow-icon">我的订单</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 快捷导航模块 end  -->
+
+    <!-- 头部模块 hearder start  -->
+    <header class="header w">
+        <!--头部  四块 logo 搜索框 热点词  购物车  定位 必须有高度 -->
+        <!-- logo模块 SEO优化 h1 a 网站名称 title-->
+        <div class="logo">
+            <h1>
+                <a href="index.html" title="品优购商城">品优购商城</a>
+            </h1>
+        </div>
+
+        <!-- 搜索栏  -->
+        <div class="search">
+            <input type="search" placeholder="语言开发">
+            <button>搜索</button>
+        </div>
+
+        <!-- 热点词 -->
+        <div class="hotwords">
+            <a href="" class="style_red">12345</a>
+            <a href="">123</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+        </div>
+
+        <!-- 购物车模块 双伪元素-->
+        <div class="shopcar">我的购物车
+            <!-- count 绝对定位 不给宽度给个高度 三个圆角 -->
+            <i class="count">8</i>
+        </div>
+    </header>
+    <!-- 头部模块 hearder end  -->
+    <!-- 导航 nav start  -->
+    <!-- 一个通栏的大盒子   然后版心 左右两个盒子 -->
+    <nav class="nav">
+        <div class="w">
+            <!-- div 块级元素上下 所以加浮动 就在同一行了-->
+            <div class="dropdown">
+                <!-- dropdown全部商品分类 包含两个盒子 dt dd 这里是类名 不是列表标签 -->
+                <div class="dt">全部商品分类</div>
+                <div class="dd">
+                    <ul>
+                        <!-- 左边有空隙 鼠标经过 背景颜色变白 字变红 -->
+                        <li><a href="#">家用电器</a> </li>
+                        <li><a href="list.html">手机、</a><a href="#">数码、</a><a href="#">通信</a> </li>
+                        <li><a href="#">电脑、办公</a> </li>
+                        <li><a href="#">家居、家具、家装、厨具</a> </li>
+                        <li><a href="#">男装、女装、童装、内衣</a> </li>
+                        <li><a href="#">个户化妆、清洁用品、宠物</a> </li>
+                        <li><a href="#">鞋靴、箱包、珠宝、奢侈品</a> </li>
+                        <li><a href="#">运动户外、钟表</a> </li>
+                        <li><a href="#">汽车、汽车用品</a> </li>
+                        <li><a href="#">母婴、玩具乐器</a> </li>
+                        <li><a href="#">食品、酒类、生鲜、特产</a> </li>
+                        <li><a href="#">医药保健</a> </li>
+                        <li><a href="#">图书、音像、电子书</a> </li>
+                        <li><a href="#">彩票、旅行、充值、票务</a> </li>
+                        <li><a href="#">理财、众筹、白条、保险</a> </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navitems">
+                <ul>
+                    <!-- 给li加浮动 到同一行 -->
+                    <!-- 给a左右padding 触发范围更大 -->
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 导航 nav end  -->
+    <!-- 现在是首页独有的 要做一个单独的css -->
+    <!-- main start -->
+    <div class="w">
+        <div class="main">
+            <!-- 先准备一个版心  再准备一个main盒子980px 左边空出详细分类模块的  margin-left220px  里面左右两个盒子一行显示要浮动 那就给main盒子一个高度  这样就不用清楚浮动 不然里面盒子浮动了会脱标 父盒子没有高度的话会影响下面下面布局-->
+            <div class="focus fl">
+                <!-- 轮播图 -->
+                <!-- 左侧按钮 -->
+                <a href="javascript:;" class="arrow-l">
+                    &lt;
+                </a>
+                <!-- 右侧按钮 -->
+                <a href="javascript:;" class="arrow-r"> &gt; </a>
+                <!-- 核心的滚动区域 -->
+                <ul>
+                    <!-- 孩子超过了父盒子宽度 所以浮动后不能一行显示 所以要修改父盒子ul宽度 -->
+                    <li>
+                        <a href="#"><img src="upload/focus.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="upload/focus1.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="upload/focus2.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="upload/focus3.jpg" alt=""></a>
+                    </li>
+                </ul>
+                <!-- 小圆圈 -->
+                <ol class="circle">
+                    <!-- 动态生成小圆圈 -->
+                </ol>
+            </div>
+            <div class="newflash">
+                <div class="news">
+                    <div class="news_hd">
+                        <h5>品优购快报</h5>
+                        <a href="#" class="more">更多</a>
+                    </div>
+                    <div class="news_bd">
+                        <ul <li><a href="#"><strong>【特惠】</strong>爆款耳机5折秒！</a></li>
+                            <li><a href="#"><strong>【特惠】</strong>母亲节，健康好礼低至5折！母亲节，健康好礼低至5折！</a></li>
+                            <li><a href="#"><strong>【特惠】</strong>爆款耳机5折秒！</a></li>
+                            <li><a href="#"><strong>【特惠】</strong>9.9元洗100张照片！</a></li>
+                            <li><a href="#"><strong>【特惠】</strong>长虹智能空调立省1000</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lifeservice">
+                    <ul>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                            <em>
+                                <img src="./images/hot.png" alt="">
+                            </em>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                        <li>
+                            <i></i>
+                            <p>话费</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bargin">
+                    <img src="upload/bargain.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- main end -->
+    <!-- 推荐 start -->
+    <div class="w recom">
+        <div class="recom_hd">
+            <img src="./images/recom.png" alt="">
+        </div>
+        <div class="recom_bd">
+            <!-- 这里他直接切图了 其实可以写的 -->
+            <ul>
+                <li><img src="upload/recom_03.jpg" alt=""></li>
+                <li><img src="upload/recom_03.jpg" alt=""></li>
+                <li><img src="upload/recom_03.jpg" alt=""></li>
+                <li><img src="upload/recom_03.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 推荐 end -->
+
+    <!-- 楼层区域制作start -->
+    <div class="floor">
+        <!-- 1楼家用电器楼层 -->
+        <div class="w jiadian">
+            <div class="box_hd">
+                <h3>家用电器</h3>
+                <div class="tab_list">
+                    <ul>
+                        <li><a href="#" class="style_red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#"> 高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- tab栏切换 选项卡＋内容  先做一个后面学了js补这个功能-->
+                <div class="tab_content">
+                    <!-- 内容1与tab_list第一个li对应  5个盒子 子代选择器加浮动一行显示 宽度不同给不同类名设置-->
+                    <div class="tab_list_item">
+                        <div class="col_210">
+                            <ul>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                            </ul>
+                            <a href="#">
+                                <img src="upload/floor-1-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col_329">
+                            <a href="#">
+                                <img src="upload/floor-1-b01.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col_221">
+                            <a href="#" class="bb"> <img src="upload/floor-1-2.png" alt=""></a>
+                            <a href="#"> <img src="upload/floor-1-3.png" alt=""></a>
+                        </div>
+                        <div class="col_221">
+                            <a href="#"> <img src="upload/floor-1-4.png" alt=""></a>
+                        </div>
+                        <div class="col_219">
+                            <a href="#" class="bb"> <img src="upload/floor-1-5.png" alt=""></a>
+                            <a href="#"> <img src="upload/floor-1-6.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2楼 -->
+        <div class="w shoujitongxun">
+            <div class="box_hd">
+                <h3>手机通讯</h3>
+                <div class="tab_list">
+                    <ul>
+                        <li><a href="#" class="style_red">热门</a>|</li>
+                        <li><a href="#">大家电</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">厨房电器</a>|</li>
+                        <li><a href="#">生活电器</a>|</li>
+                        <li><a href="#">个护健康</a>|</li>
+                        <li><a href="#">应季电器</a>|</li>
+                        <li><a href="#">空气/净水</a>|</li>
+                        <li><a href="#">新奇特</a>|</li>
+                        <li><a href="#"> 高端电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box_bd">
+                <!-- tab栏切换 选项卡＋内容  先做一个后面学了js补这个功能-->
+                <div class="tab_content">
+                    <!-- 内容1与tab_list第一个li对应  5个盒子 子代选择器加浮动一行显示 宽度不同给不同类名设置-->
+                    <div class="tab_list_item">
+                        <div class="col_210">
+                            <ul>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                                <li><a href="#">节能补贴</a></li>
+                            </ul>
+                            <a href="#">
+                                <img src="upload/floor-1-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col_329">
+                            <a href="#">
+                                <img src="upload/floor-1-b01.png" alt="">
+                            </a>
+                        </div>
+                        <div class="col_221">
+                            <a href="#" class="bb"> <img src="upload/floor-1-2.png" alt=""></a>
+                            <a href="#"> <img src="upload/floor-1-3.png" alt=""></a>
+                        </div>
+                        <div class="col_221">
+                            <a href="#"> <img src="upload/floor-1-4.png" alt=""></a>
+                        </div>
+                        <div class="col_219">
+                            <a href="#" class="bb"> <img src="upload/floor-1-5.png" alt=""></a>
+                            <a href="#"> <img src="upload/floor-1-6.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 楼层区域制作end -->
+
+        <!-- 推荐 end -->
+        <!-- 底部 footer start  -->
+        <footer class="footer">
+            <!-- 这里忘了给类名 padding-top没生效 所以ul跟上边框贴着了 -->
+            <!-- 一个灰色大盒子 和里面的盒子有空隙给个padding-top  再放个版心-->
+            <div class="w">
+                <!-- 版心里面的盒子 给个下边框 4个li -->
+                <div class="mod_service">
+                    <ul>
+                        <li>
+                            <!-- 边框到内容有距离 paddingleft top挤过来 图片一浮动 文字就围绕着他了-->
+                            <h5></h5>
+                            <!-- 这个图片插入精灵图 计算坐标 一次换多张用JS-->
+                            <div class="service_txt">
+                                <h4>正品保障</h4>
+                                <p>正品保障,提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5></h5>
+                            <div class="service_txt">
+                                <h4>正品保障</h4>
+                                <p>正品保障,提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5></h5>
+                            <div class="service_txt">
+                                <h4>正品保障</h4>
+                                <p>正品保障,提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5></h5>
+                            <div class="service_txt">
+                                <h4>正品保障</h4>
+                                <p>正品保障,提供发票</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <script>
+                    // 1. 获取元素 所有的h5  第一个坐标是-253px -2px 第二个坐标是-253px -54px
+                    var h5s = document.querySelectorAll('h5');
+                    for (var i = 0; i < h5s.length; i++) {
+                        // h5s[i].style.backgroundPosition = '-253px - '+这里变量+  'px';  
+                        var index = i * 52;
+                        h5s[i].style.backgroundPosition = '-253px -' + index + 'px';
+                    }
+                </script>
+
+                <div class="mod_help">
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行/团购</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd>
+                            <img src="images/wx_cz.jpg" alt="">
+                            品优购客户端
+                        </dd>
+                    </dl>
+                </div>
+                <div class="mod_copyright">
+                    <div class="links">
+                        <a href="#">关于我们</a> | <a href="#">联系我们</a> | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 |
+                        品优购公益 | English Site | Contact U
+                    </div>
+                    <div class="copyright">
+                        地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br>
+                        京ICP备08001421号京公网安备110108007702
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- 底部 footer end  -->
+</body>
+
+</html>
