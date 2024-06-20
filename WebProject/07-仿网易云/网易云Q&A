@@ -1,0 +1,78 @@
+@ 技术栈
+React + JavaScript + redux/react-redux + react-router-dom + axios + styled-components + antd
+React 作为前端框架
+Ant Design 作为前端UI框架
+Redux 进行状态管理
+Axios 进行网络请求
+通过调用网易云的API来获取数据
+使用 react-router-dom 的 Route, Switch 管理路由
+使用普通css 及 styled-component 编写 CSS
+配置路径别名使用: carco
+项目中的优化: 函数式组件全部采用memo、路由懒加载、函数防抖
+
+@ 项目介绍
+本项目是一个仿网易云音乐的在线音乐播放平台，项目主要实现了推荐、排行榜、歌单、主播电台、歌手、新碟上架板块的展示，并且提供了音乐的播放控制，包括播放、暂停、上/下一首、进度拖动、改变播放模式等、歌单管理以及实时歌词展示功能。
+
+@ 实现功能
+暂停、播放歌曲
+切换上一首、下一首歌曲
+拖动进度条改变播放进度
+随机播放、循环播放、单曲循环
+实时展示歌词
+切换不同分类的歌单、歌手、电台
+实现推荐、排行榜、歌单、主播电台、歌手、新碟上架板块的展示
+
+@ 问题/难点
+滑动播放音乐的进度条时，进度条会短暂的回弹到滑动前位置。错误原因：在获取当前音乐播放时间时，利用setCurrentTime(e.target.currentTime * 1000)，但是e.target.currentTime无法更加实时的获得当前滑动的数据，所以出现回弹。 解决方法：在滑动结束后的回调函数冲重新更新进度条时间。
+
+@1 怎么实现详情页跳转
+定义路由：
+{
+  path: "/discover/song/detail",
+  exact: true,
+  component: SongDetail,
+}
+跳转：
+<span className="name text-nowrap">
+  <Link to={`song/detail?id=${item.id}`}>{item.name}</Link>
+</span>
+
+
+@2 选项卡切换不同的数据【tab栏切换】
+当用户点击关键字时，需要触发一个事件来更改 URL 中的查询参数（例如 area 参数），从而触发组件重新加载相应的数据。
+const keywordClick = useCallback(
+  (keyword) => {
+    const englishName = AlbumkeywordsMapping[keyword];
+    history.push(`/discover/album/?area=${englishName}`);
+  },
+  [history]
+);
+URL 参数解析： 使用 useLocation 钩子来解析当前 URL 的查询参数，并根据这些参数来获取相应的数据。
+const location = useLocation();
+const params = new URLSearchParams(location.search);
+const area = params.get("area");
+请求数据并更新状态： 根据 URL 参数发起请求，获取相应的专辑数据，并更新组件状态来重新渲染。
+useEffect(() => {
+  dispatch(getTopAlbumsAction(1, area));
+}, [dispatch, area]);
+
+const onPageChange = (page) => {
+  setCurrentPage(page);
+  dispatch(getTopAlbumsAction(page, area));
+};
+
+在 ThemeHeaderRCM 组件中，点击关键字时会触发 keywordClick 函数。
+在 keywordClick 函数中，数通过 react-router-dom 提供的 useHistory 钩子获取到 history 对象，history.push 方法用于路由导航，并且传递了一个 cat 参数，参数的值为当前点击的关键字。这个参数在路由导航时会被添加到 URL 中，类似于 "/discover/songs?cat=华语" 这样的形式。
+在 HotRecommend 组件中，keywordClick 函数被传递给了 ThemeHeaderRCM 组件作为 props。当用户在 ThemeHeaderRCM 组件中点击关键字时，就会触发 keywordClick 函数，从而执行页面跳转的操作。
+
+@ 音乐播放面板 播放列表切换歌曲
+
+@ 点击播放榜单所有歌曲
+当用户点击播放榜单中的某一首歌曲时，会触发一个 action 来处理这一事件。
+定义 Action type：export const PLAY_RANKING_LIST = "player/PLAY_RANKING_LIST";
+创建 Action：playRankingListAction
+导出这个action
+在组件中引入 Action，将 playRankingListAction 绑定到播放榜单的点击事件上并传递正确的 playlist 属性，
+[ 当触发 playRankingListAction，将整个榜单设置为当前播放列表，
+再将播放列表中的第一首歌设置为当前播放的歌曲，并获取并解析歌词，
+之后更新 Redux state，界面随之更新，显示当前播放的歌曲及其歌词。]
