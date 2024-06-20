@@ -1,0 +1,49 @@
+.footer {
+    margin: 100px 25px 20px 25px;
+
+    .top {
+        display: flex;
+        gap: 50px;
+
+        .item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: justify;
+            font-size: 14px;
+
+            h1 {
+                font-size: 18px;
+                font-weight: 500;
+                color: #555;
+            }
+
+            span {
+                color: gray;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .left {
+            .logo {
+                color: #2870fe;
+            }
+
+            .copyright {
+                margin-left: 20px;
+                color: gray;
+            }
+        }
+
+        .right img {
+            height: 50px;
+        }
+    }
+}
