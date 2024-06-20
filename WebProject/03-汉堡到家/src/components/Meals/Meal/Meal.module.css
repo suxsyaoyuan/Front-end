@@ -1,0 +1,50 @@
+.Meal {
+    /* 两个div 水平排列 开启弹性盒 */
+    display: flex;
+    border-bottom: 1px #f2f2f2 solid;
+    /* 设置外边距 */
+    padding: 30rem 20rem;
+    /* 设置辅助轴的对齐方式 */
+    align-items: center;
+}
+
+.ImgBox {
+    width: 280rem;
+}
+
+img {
+    width: 100%;
+}
+
+
+.Title {
+    font-weight: normal;
+    font-size: 36rem;
+    margin: 0;
+}
+
+.Desc {
+    color: #bbb;
+    font-size: 26rem;
+    margin: 0;
+    padding-right: 40rem;
+
+}
+
+.PriceWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40rem;
+
+}
+
+.Price {
+    font-weight: bold;
+    font-size: 36rem;
+    width: 100%;
+}
+
+.Price::before {
+    content: '￥';
+    font-size: 24rem;
+}

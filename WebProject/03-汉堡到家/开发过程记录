@@ -1,0 +1,86 @@
+# 项目结构分析
+<!-- 
+    meal-delivery
+├─ public
+    ├─ index.html
+    ├─ img
+├─ src
+    ├─ index.js
+    ├─ index.css
+    ├─ App.js
+    ├─ App.css
+    ├─ components
+        ├─ Cart
+        ├─ FilterMeals
+        ├─ Meals
+        ├─ Meal
+    ├─ UI
+        ├─ Backdrop
+        ├─ Confirm
+        ├─ Counter 
+-->
+
+# 食物列表Meals
+## 食物组件Meal
+图片、标题、描述、价格、数量按钮
+
+## 计数器组件Counter
+数量按钮单独做一个计数器组件
+
+## 加载Meals数据:
+创建一个state用来存储食物列表
+<Meals mealsData={mealsData} />  //把数据传到Meals里
+然后Meals里可以通过props访问这个数据 遍历数据 转换成Meal
+然后要把每一个数据传给Meal
+Meal中就可以直接通过props访问
+
+#购物车中商品添加删除
+创建一个state，用来存储购物车的数据 const [cartData, setCartData] = useState({})
+  /*
+  *   1.商品 [] items
+  *   2.商品总数（totalAmount）
+  *   3.商品总价（totalPrice）
+  * */
+
+添加商品函数
+删除商品函数
+//App传给Meals 传给Meal 传给Counter 
+这个过程太麻烦 采用Context app传入context 然后传给counter
+
+# 搜索框
+拿到输入的关键字
+创建一个过滤meals的函数
+传给FilterMeals
+
+# 购物车
+用Context传数据
+两种状态 加一个判断
+
+# Backdrop
+
+
+# 购物车详情
+用useContext数据勾出来
+## 显示与隐藏
+## 清空购物车
+设置state控制确认框的显示 默认不显示
+确认取消两个函数
+
+# 结账页面
+useContext
+重新定义
+
+#effect
+#reducer
+
+#1 
+报错：favicon.ico:1 GET http://127.0.0.1:5500/WebProject/03-%E8%AE%A2%E9%A4%90APP%EF%BC%88React%EF%BC%89/hamburgertothehome/public/%PUBLIC_URL%/favicon.ico 400 (Bad Request)
+<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+修改：
+  <link rel="icon" href="./favicon.ico" />
+
+#2
+报错：Unchecked runtime.lastError: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+修改：关闭浏览器扩展
+
+#3 页面不显示
